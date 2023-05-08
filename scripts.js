@@ -22,6 +22,8 @@ let startIndex = 0;
 let endIndex = 36;
 const extracted = books.slice(startIndex, endIndex)
 
+
+//creates a book preview and extracts to innerHTML
 for(let i = 0; i < extracted.length; i++) {
     const preview = document.createElement('dl')
    preview.className = 'preview'
@@ -51,11 +53,15 @@ booklist1.appendChild(fragment)
 const searchbutton = document.querySelector("[data-header-search]");
 searchbutton.addEventListener('click', (event) => {
     document.querySelector("[data-search-overlay]").style.display ="block";
-})
+})  //search
+
+
 const searchCancel = document.querySelector("[data-search-cancel]");
 searchCancel.addEventListener('click',(event) =>{
 document.querySelector("[data-search-overlay]").style.display = "none";
-})
+})//cancel search
+
+
 const settingbutton = document.querySelector("[data-header-settings]")
 settingbutton.addEventListener('click', (event) =>{
     document.querySelector("[data-settings-overlay]").style.display ="block";
@@ -68,7 +74,10 @@ document.querySelector("[data-settings-overlay]").style.display = "none";
 const dataSettingsTheme = document.querySelector('[data-settings-theme]')
 const saveButton = document.querySelector("body > dialog:nth-child(5) > div > div > button.overlay__button.overlay__button_primary")
 saveButton.addEventListener('click',(event)=> {
-    event.preventDefault()
+    event.preventDefault()  // savebutton
+
+
+    // day and night themes 
 if (dataSettingsTheme.value === 'day'){
     document.querySelector('body').style.setProperty('--color-dark',day.dark)
     document.querySelector('body').style.setProperty('--color-light', day.light)
