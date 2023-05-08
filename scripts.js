@@ -54,7 +54,7 @@ searchbutton.addEventListener('click', (event) => {
 })
 const searchCancel = document.querySelector("[data-search-cancel]");
 searchCancel.addEventListener('click',(event) =>{
-document.querySelector("[data-search-overly]").style.display = "none";
+document.querySelector("[data-search-overlay]").style.display = "none";
 })
 const settingbutton = document.querySelector("[data-header-settings]")
 settingbutton.addEventListener('click', (event) =>{
